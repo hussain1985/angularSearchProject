@@ -1,0 +1,19 @@
+
+
+
+<div class="media" *ngFor="let track of songsTracks">
+  <div class="media-left">
+    
+      <img src="{{track.artworkUrl100}}">
+    
+  </div>
+  <div class="media-body">
+   <a target="_blank" href="{{track.trackViewUrl}}">
+    <h4 class="media-heading">{{ track.trackName }}</h4>
+     </a>
+     <p>{{track.primaryGenreName}}</p>
+    <p>Price: {{track.trackPrice | currency: 'USD' }}</p>
+      <p><small>Realsed on {{track.releaseDate | date}}</small></p>
+   
+  </div>
+</div>
